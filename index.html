@@ -42,7 +42,7 @@
         <div id='stars'></div>
     </div>
     <div class="row sidebar-row">
-        <div class="col-md-3 px-0">
+        <div class="col-md-3">
             <nav class="navbar navbar-expand-md sidebar navbar-dark p-0">
                 <button class="navbar-toggler ms-auto m-2 d-md-none" type="button" data-bs-toggle="collapse"
                     data-bs-target="#sidebarNav" aria-controls="sidebarNav" aria-expanded="false"
@@ -54,18 +54,10 @@
                         <img src="images/photo.jpg" class="sidebar-photo img-fluid d-none d-md-block" alt="My photo!" />
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a class="n-link" href="#home">
+                                <a class="n-link active" href="#home">
                                     <h3>
                                         <i class="fa-solid fa-house"></i>
                                         Home
-                                    </h3>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="n-link" href="#about">
-                                    <h3>
-                                        <i class="fa-solid fa-user"></i>
-                                        About Me
                                     </h3>
                                 </a>
                             </li>
@@ -134,171 +126,99 @@
         <div class="col-md-9">
             <div id="scrollbox">
                 <section id="home" class="container">
-                    <div class="hero-contents">
-                        <img src="images/photo.jpg" class="img-fluid mobile-photo" alt="My Photo!">
-                        <h1>Hello, my name is Thomas Brown</h1>
-                        <h2>Full-Stack Software Developer</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien
-                            vitae
-                            pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo
-                            eu
-                            aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum
-                            egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit
-                            semper
-                            vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos
-                            himenaeos.
-                        </p>
-                        <button><a href="#about">Learn More</a></button>
-                        <button><a href="#contact">Contact Me</a></button>
+                    <div class="row">
+                        <div class="hero-contents px-5 py-4">
+                            <img src="images/photo.jpg" class="img-fluid mobile-photo" alt="My Photo!">
+                            <h1>Hello, I'm Thomas!</h1>
+                            <h4>
+                                I'm a full-stack software developer with a passion for building many different types of software and games. I'm currently an undergraduate student at Boise State University studying Games, Interactive Mobile Media. I have gained plenty of experience in a variety of programming languages and tools, and I'm always looking to learn more.
+                            </h4>
+                            <button><a href="#about">Learn More</a></button>
+                            <button><a href="#contact">Contact Me</a></button>
+                        </div>
+                    </div>
+                    <div class="row px-5">
+                        <div class="col-md-12">
+                            <div class="frame skill-images">
+                                <img src="images/skill_unity.png" class="skill-image" alt="Unity">
+                                <img src="images/skill_unreal.png" class="skill-image" alt="Unreal Engine">
+                                <img src="images/skill_csharp.png" class="skill-image" alt="C#">
+                                <img src="images/skill_cplusplus.png" class="skill-image" alt="C++">
+                                <img src="images/skill_html.png" class="skill-image" alt="HTML">
+                                <img src="images/skill_javascript.png" class="skill-image" alt="JavaScript">
+                                <img src="images/skill_css.png" class="skill-image" alt="CSS">
+                                <img src="images/skill_nodejs.svg" class="skill-image" alt="Node.js">
+                                <img src="images/skill_mysql.png" class="skill-image" alt="MySQL">
+                                <img src="images/skill_git.png" class="skill-image" alt="Git">
+                                <img src="images/skill_blender.png" class="skill-image" alt="Blender">
+                                <img src="images/skill_photoshop.png" class="skill-image" alt="Photoshop">
+                                <img src="images/skill_illustrator.png" class="skill-image" alt="Illustrator">
+                            </div>
+                        </div>
                     </div>
                 </section>
-                <section id="about" class="container">
-                    <div class="row p-3">
+                <!-- <section id="about" class="container">
+                    <div class="row p-5">
                         <div class="col-md-12">
                             <h1>About Me</h1>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien
-                                vitae
-                                pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo
-                                eu
-                                aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum
-                                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit
-                                semper
-                                vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos
-                                himenaeos.
+                                I'm a full-stack software developer with a passion for building many different types of software and games. I'm currently an undergraduate student at Boise State University studying Games, Interactive Mobile Media. I have gained plenty of experience in a variety of programming languages and tools, and I'm always looking to learn more.
                             </p>
                         </div>
                     </div>
-                    <div class="row p-3">
-                        <div class="col-md-4 p-3">
-                            <div class="frame">
-                                <h3>Education</h3>
-                                <p>Boise State University</p>
-                                <p>Undergraduate in Games, Interactive Mobile Media</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 p-3">
-                            <div class="frame">
-                                <h3>Programming Languages</h3>
-                                <ul>
-                                    <li>
-                                        C#
-                                    </li>
-                                    <li>
-                                        HTML
-                                    </li>
-                                    <li>
-                                        JavaScript
-                                    </li>
-                                    <li>
-                                        CSS
-                                    </li>
-                                    <li>
-                                        C++
-                                    </li>
-                                    <li>
-                                        SQL
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4 p-3">
-                            <div class="frame">
-                                <h3>Application Proficiencies</h3>
-                                <ul>
-                                    <li>
-                                        Visual Studio Code
-                                    </li>
-                                    <li>
-                                        Unity
-                                    </li>
-                                    <li>
-                                        Unreal Engine
-                                    </li>
-                                    <li>
-                                        Adobe Creative Suite<br />
-                                        (Photoshop, Illustrator)
-                                    </li>
-                                    <li>
-                                        Blender
-                                    </li>
-                                    <li>
-                                        Git
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                </section> -->
                 <section id="projects" class="container">
-                    <div class="row">
+                    <div class="row p-5">
                         <div class="col-md-12">
                             <h1>Projects</h1>
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-md-4 p-3">
-                                        <div class="frame">
-                                            <img src="images/project_1_cover.jpg" class="img-fluid" alt="Project 1">
-                                            <h3>Project 1</h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus
-                                                ex sapien
-                                                vitae
-                                                pellentesque sem placerat. In id cursus mi pretium tellus duis
-                                                convallis. Tempus leo
-                                                eu
-                                                aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus
-                                                bibendum
-                                                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-                                                hendrerit
-                                                semper
-                                                vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra
-                                                inceptos
-                                                himenaeos.</p>
+                                        <div class="frame project-frame">
+                                            <img src="images/placeholder.png" class="img-fluid project-image" alt="Project 1">
+                                            <div class="project-margin">
+                                                <h3>Project 1</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus
+                                                    ex sapien
+                                                    vitae
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4 p-3">
-                                        <div class="frame">
-                                            <img src="images/project_2_cover.jpg" class="img-fluid" alt="Project 2">
-                                            <h3>Project 1</h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus
-                                                ex sapien
-                                                vitae
-                                                pellentesque sem placerat. In id cursus mi pretium tellus duis
-                                                convallis. Tempus leo
-                                                eu
-                                                aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus
-                                                bibendum
-                                                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-                                                hendrerit
-                                                semper
-                                                vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra
-                                                inceptos
-                                                himenaeos.</p>
+                                        <div class="frame project-frame">
+                                            <img src="images/placeholder.png" class="img-fluid project-image" alt="Project 2">
+                                            <div class="project-margin">
+                                                <h3>Project 2</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus
+                                                    ex sapien
+                                                    vitae
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4 p-3">
-                                        <div class="frame">
-                                            <img src="images/project_3_cover.jpg" class="img-fluid" alt="Project 3">
-                                            <h3>Project 3</h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus
-                                                ex sapien
-                                                vitae
-                                                pellentesque sem placerat. In id cursus mi pretium tellus duis
-                                                convallis. Tempus leo
-                                                eu
-                                                aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus
-                                                bibendum
-                                                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-                                                hendrerit
+                                        <div class="frame project-frame">
+                                            <img src="images/placeholder.png" class="img-fluid project-image" alt="Project 3">
+                                            <div class="project-margin">
+                                                <h3>Project 3</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus
+                                                    ex sapien
+                                                    vitae
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </section>
                 <section id="contact" class="container">
-                    <div class="row">
+                    <div class="row p-5">
                         <div class="col-md-12">
                             <h1>Contact Me</h1>
                             <h4>You can contact me via email at <a
