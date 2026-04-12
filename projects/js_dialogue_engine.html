@@ -135,26 +135,176 @@
                                     “JS Dialogue Engine” was a small text-based roleplaying web game where the user
                                     could play the role of a fantasy character and could communicate freely with other
                                     characters using ChatGPT.
-
+                                    <br /><br />
+                                    This project is what also introduced me to server-side web development using
+                                    Node.js. All my previous web projects were front-end only, which made this project somewhat of a challenge but also a great learning experience.
+                                    <br /><br />
                                     The project consists of both a front-end and back-end Node.js server. The front-end
                                     allows the user to communicate with ChatGPT through a textbox, view their chat
                                     history, and a settings menu allowing the user to modify the other character's
                                     history, name, personality, etc. The back-end server handles the communication with
                                     ChatGPT and validating user inputs.
-
-                                    This project is what also introduced me to server-side web development using
-                                    Node.js.
                                 </p>
                             </div>
                             <div class="frame container-fluid">
                                 <div class="row">
                                     <div class="col-md-12">
+                                        <h3>Video Demonstration</h3>
                                         <video class="project-video" controls preload="metadata" playsinline>
                                             <source
-                                                src="js_dialogue_engine/media/js_dialogue_engine.mp4"
+                                                src="js_dialogue_engine/js_dialogue_engine.mp4"
                                                 type="video/mp4">
                                             Your browser does not support embedded video.
                                         </video>
+                                    </div>
+                                    <div class="project-break"></div>
+                                    <div class="col-md-12">
+                                        <h3>Code Snippets</h3>
+                                        <p>Here are some code snippets from both the public front-end and Node server, both used for processing and verifying user inputs.</p>
+                                        <h4>Front-End</h4>
+                                        <!-- Intentionally ruin the formatting for correct syntax, thanks HTML -->
+<pre><code>function SubmitDataToChatGPT() {
+
+    // Get player response
+    playerResponse = playerInput.value;
+    console.log(`Player Response: \n${playerResponse}`);
+
+    ToggleGameState(currentGameState, true);
+    SetPlayerInputState("process");
+
+    playerMsgText.innerText = playerResponse;
+
+    // Create FormData Json Object
+    let formData = new FormData();
+
+    // Set string variabled for prompt
+    formData.set('player-name', playerNameInput.value);
+    formData.set('player-info', playerInfoInput.value);
+    formData.set('char-name', charNameInput.value);
+    formData.set('char-info', charInfoInput.value);
+    formData.set('context', GetConversationString(conversationIndex));
+    formData.set('situation', situationInput.value);
+    formData.set('memory-token', GetMemoryTokenString());
+    formData.set('max-length', maxLengthInput.value),
+    formData.set('player-response', playerResponse);
+
+    // Send fetch API request
+    fetch(URL, { method: 'POST', body: formData })
+        .then((response) => {
+            return new Promise((resolve) => response.json()
+                .then((json) => resolve({
+                    status: response.status,
+                    json,
+                })
+                ));
+        })
+        // Display Any Errors on Form
+        .then(({ status, json }) => {
+            const errorMessages = document.getElementsByClassName('error-text');
+            errorBanner.hidden = true;
+            for (htmlElement of errorMessages) {
+                htmlElement.innerHTML = '';
+            }
+            if (status === 400) {
+                errorBanner.innerText = `ERROR: Settings field(s) contain errors. Please correct them before resubmitting!`;
+                errorBanner.hidden = false;
+                for (error of json.errors) {
+                    const errorId = error.path + '-input-error';
+                    document.getElementById(errorId).innerHTML = error.msg;
+                }
+                // Reset Application to previous state
+                ToggleGameState(currentGameState, false);
+                SetPlayerInputState("enable");
+
+                return null;
+            }
+            return json;
+        })
+        // Promise Chain to handle JSON Response
+        .then(json => {
+            if (json && json.text) {
+                ToggleGameState("conversation", false);
+                DisplayAIOutput(json.text);
+            }
+            // Return if error was already handled (e.g. blank settings fields)
+            else if (json === null)
+                return;
+            else {
+                errorBanner.innerText = `ERROR: Invalid JSON response received:\n ${JSON.stringify(json)}`;
+                errorBanner.hidden = false;
+                ToggleGameState(currentGameState, false);
+                SetPlayerInputState("enable");
+                return null;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            ToggleGameState(currentGameState, false);
+            SetPlayerInputState("enable");
+        });
+
+    console.log("Sent Form Data To Server");
+}</code></pre>
+                                        <h4>Node Server</h4>
+<pre><code>app.post(
+    '/',
+    upload.none(),
+    check('player-name', `Please enter your player name!`)
+        .isLength({ min: 3 }),
+    check('player-info', `Please enter your player information!`)
+        .isLength({ min: 3 }),
+    check('char-name', `Please enter a character name!`)
+        .isLength({ min: 3 }),
+    check('char-info', `Please enter character information!`)
+        .isLength({ min: 3 }),
+    check('situation', `Please enter a situation!`)
+        .isLength({ min: 3 }),
+    check('player-response', `Please enter a valid response!`)
+        .isLength({ min: 1 }),
+    check('max-length', `Please enter a valid integer between 20 and 500 characters`)
+        .isInt({ min: 20, max: 500 }),
+    async (request, response) => {
+
+        // Validate Request:
+        const errors = validationResult(request);
+        if (!errors.isEmpty()) {
+            return response
+                .status(400)
+                .setHeader('Access-Control-Allow-Origin', '*') // Prevent CORS error
+                .json({
+                    message: 'Request fields are invalid.',
+                    errors: errors.array(),
+                });
+        }
+
+        console.log(`\n[DEBUG] Processing Prompt`);
+
+        let prompt = INITIAL_PROMPT
+            .replace(P_playerInfo, request.body['player-info'])
+            .replace(P_charName, request.body['char-name'])
+            .replace(P_charInfo, request.body['char-info'])
+            .replace(P_context, request.body['context'])
+            .replace(P_memoryTokens, request.body['memory-token'] === ""
+                ? "No memories so far" : request.body['memory-token'])
+            .replace(P_maxLength, request.body['max-length'])
+            .replace(P_playerResponse, request.body['player-response'])
+            .replace(P_situation, request.body['situation']);
+
+        console.log(`\n[DEBUG] User Prompt:\n\n${prompt}`);
+
+        const chatGPTResponse = await client.responses.create({
+            model: "gpt-5",
+            input: prompt
+        });
+
+        console.log(`\n[DEBUG] GPT-5 Output:\n\n${chatGPTResponse.output_text}`);
+
+        response.statusCode = 500;
+        response.setHeader('Access-Control-Allow-Origin', '*') // Prevent CORS error
+        response.setHeader('Content-Type', 'application/json');
+        response.end(JSON.stringify({ text: chatGPTResponse.output_text }));
+    });
+</code></pre>
                                     </div>
                                     <div class="project-break"></div>
                                     <div class="row mt-3">

@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM Loaded!');
-
+    
     const navLinks = document.getElementsByClassName('n-link');
     const sections = document.getElementsByTagName('section');
 
