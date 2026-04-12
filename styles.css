@@ -208,6 +208,7 @@ button a:active {
 .project-image {
     object-fit: contain;
     border-radius: 1rem;
+    width: 100%;
 }
 
 .sidebar {
@@ -466,7 +467,7 @@ section {
     width: 3rem;
 }
 
-code {
+pre {
     background-color: var(--blue10);
     border-radius: var(--margin-s);
     padding: var(--margin-s);
@@ -474,6 +475,7 @@ code {
     overflow-x: auto;
     white-space: pre-wrap;
     word-break: break-word;
+    max-height: 25rem;
 }
 
 /* Star Particle Animations
