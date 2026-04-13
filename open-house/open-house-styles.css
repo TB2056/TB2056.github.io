@@ -389,7 +389,7 @@ p {
     justify-content: center;
     border-radius: 15%;
     animation: logo-bob 10s ease-in-out infinite;
-    box-shadow: 0 0rem 1.5rem black;
+    
 }
 
 .large-icon.orange {
