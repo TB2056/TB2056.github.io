@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+<!-- NOTE: These pages are a portfolio-friendly version of the Open House Games website; a fictional game studio I made as a part of an assignment. Don't take it too seriously. -->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Open House Games</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Galindo&family=Ribeye+Marrow&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="open-house-styles.css">
+
+    <!-- Scripts -->
+    <script src="menu.js" defer></script>
+
+</head>
+
+<body>
+    <!-- Topbar (Header) -->
+    <div class="topbar header-row flex">
+        <a class="navbar-brand py-2 me-md-3" href="home.html">
+            <img src="images/Logo-05.svg" class="img-fluid topbar-logo" alt="Open House Games" />
+        </a>
+        <button type="button" class="secondary margin-auto-left m-3">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <a href="contact.html">Contact Us</a>
+        </button>
+        <button type="button" id="menu-button" class="menu-btn" aria-controls="menu-screen" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+    </div>
+    <!-- Menu Screen -->
+    <nav id="menu-screen" class="menu-screen animate-slide-down-in hidden">
+        <!-- <img src="images/Logo-06.svg" class="img-fluid menu-screen-logo" alt="Open House Logo" width="100" /> -->
+        <ul class="menu-screen-list navbar-nav">
+            <li class="menu-screen-item animate-scale-in-delay-1">
+                <button class="menu-screen-button">
+                    <a href="home.html">Home</a>
+                </button>
+            </li>
+            <li class="menu-screen-item animate-scale-in-delay-2">
+                <button class="menu-screen-button">
+                    <a href="about.html">About</a>
+                </button>
+            </li>
+            <li class="menu-screen-item animate-scale-in-delay-3">
+                <button class="menu-screen-button">
+                    <a href="contact.html">Contact</a>
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Contact Page -->
+        <section id="desc" class="container-fluid">
+            <div class="content-margin">
+                <div class="row flex-align-left">
+                    <div class="col-md-6">
+                        <h1 class="desc-header">Contact Us</h1>
+                        <p>
+                            You can contact us via email at <a href="mailto:openhousegames@gmail.com">openhousegames@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

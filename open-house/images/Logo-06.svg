@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="g" data-name="Layer 12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <style>
+      .i {
+        fill: #cc4465;
+        font-family: Galindo-Regular, Galindo;
+        font-size: 264px;
+      }
+
+      .j {
+        stroke: #ceebf2;
+      }
+
+      .j, .k {
+        stroke-width: 30px;
+      }
+
+      .j, .k, .l {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .k {
+        stroke: #f89957;
+      }
+
+      .l {
+        stroke: #cc4465;
+        stroke-width: 20px;
+      }
+
+      .m {
+        fill: #4e95ca;
+        font-family: Barriecito-Regular, Barriecito;
+        font-size: 140px;
+      }
+    </style>
+  </defs>
+  <text class="i" transform="translate(102.76 -128.74) scale(.83 1)"><tspan x="0" y="0">O</tspan></text>
+  <text/>
+  <text class="m" transform="translate(47.75 494.2)"><tspan x="0" y="0">Games</tspan></text>
+  <polyline class="k" points="83.75 371.24 83.69 128.86 25.05 128.86 256 26.94 334.05 61.15 334.05 26.94 405.33 26.94 405.33 93.06 486.95 128.86 428.31 128.86 428.31 372.41"/>
+  <text class="i" transform="translate(102.76 353.36) scale(.83 1)"><tspan x="0" y="0">O</tspan></text>
+  <polyline class="j" points="295.91 357.07 295.91 256.66 295.91 165.34"/>
+  <line class="j" x1="366.25" y1="256.66" x2="302.24" y2="256.66"/>
+  <polyline class="j" points="372.59 357.07 372.59 256.66 372.59 165.34"/>
+  <line class="l" x1="184.8" y1="184.17" x2="187.11" y2="333.72"/>
+  <line class="l" x1="152.76" y1="256.66" x2="223.77" y2="254.77"/>
+</svg>
