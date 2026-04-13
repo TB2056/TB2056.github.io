@@ -34,7 +34,6 @@
     --header-1: 3rem;
 }
 
-
 html,
 body {
     background-color: white;
@@ -192,7 +191,7 @@ h1,
 h2,
 h3 {
     margin-bottom: var(--margin-m);
-    font-family: "Noto Sans";
+    font-family: "Galindo";
 }
 
 h1 {
@@ -264,7 +263,6 @@ p {
 
 .menu-screen-list {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
@@ -523,6 +521,17 @@ p {
 
     .small-icon.orange {
         color: var(--third03);
+    }
+
+    .contact-button-text {
+        display: none;
+    }
+
+    .contact-button {
+        width: 2.5rem;
+        height: 2.5rem;
+        align-items: center;
+        justify-content: center;
     }
 }
 
