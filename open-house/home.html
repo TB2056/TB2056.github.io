@@ -34,6 +34,7 @@
 
     <!-- Scripts -->
     <script src="menu.js" defer></script>
+    <script src="scroll-animations.js" defer></script>
 
 </head>
 
@@ -77,13 +78,13 @@
     <div id="main-content">
         <!-- Landing Page -->
         <section id="landing-page">
-            <div class="banner-home animate-slide-fade-in-delay-1">
+            <div class="banner-home" data-animate="animate-slide-fade-in-delay-1">
                 <img src="images/home-banner.png" class="img-fluid banner-image" alt="Home Banner" />
                 <div class="content-margin banner-logo-wrap">
                     <img src="images/Logo-01.png" class="img-fluid home-logo logo-bob" alt="Open House Logo" />
                 </div>
             </div>
-            <div class="content-margin animate-slide-fade-in-delay-2">
+            <div class="content-margin" data-animate="animate-slide-fade-in-delay-2">
                 <div class="flex-align-left flex-col">
                     <h1 class="center-text">Welcome to Open House Games</h1>
                     <h4 class="center-text">
@@ -98,21 +99,33 @@
 
         <div class="break-line"></div>
         <!-- What We Do -->
-        <section id="desc" class="container-fluid">
+        <section id="desc" class="container">
             <div class="content-margin">
-                <div class="row flex-align-left">
-                    <div class="col-md-6">
-                        <h1 class="desc-header">What We Do</h1>
+                <div class="row flex-align-left" data-animate="animate-slide-fade-in-delay-1">
+                    <div class="col-md-8">
+                        <h1 class="flex"><i class="fa-solid fa-lightbulb small-icon orange" aria-hidden="true"></i>What We Do</h1>
                         <p>
                             Note: as of writing this, this website has placeholder text. If you are seeing this, it is
                             very likely that GitHub Pages has not updated yet. The actual text should be up after
                             reloading a few times in a few minutes.
+
                         </p>
                     </div>
+                    <div class="col-md-4">
+                    
+                        <div class="center-text large-icon orange">
+                            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="row animate-fade-in-delay-2 flex-align-right">
-                    <div class="col-md-6">
-                        <h1 class="">Our Mission</h1>
+                <div class="row" data-animate="animate-slide-fade-in-delay-2">
+                    <div class="col-md-4">
+                        <div class="center-text large-icon">
+                            <i class="fa-solid fa-flag" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <h1 class="flex"><i class="fa-solid fa-flag small-icon" aria-hidden="true"></i>Our Mission</h1>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
                             incididunt ut
@@ -123,6 +136,37 @@
                 </div>
             </div>
         </section>
+        <div class="break-line"></div>
+        <section id=""games">
+            <div class="content-margin container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Our Games</h1>
+                    </div>
+                </div>
+                <div class="row flex-center">
+                    <div class="col-md-4">
+                        <div class="panel">
+                            <img src="images/WIP.png" class="img-fluid flex-center" alt="WIP Project Icon">
+                            <h3>WIP</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel">
+                            <img src="images/WIP.png" class="img-fluid flex-center" alt="WIP Project Icon">
+                            <h3>WIP</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel">
+                            <img src="images/WIP.png" class="img-fluid flex-center" alt="WIP Project Icon">
+                            <h3>WIP</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="break-line"></div>
         <div id="footer">
             <div class="content-margin">
                 <p>

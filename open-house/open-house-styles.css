@@ -378,6 +378,24 @@ p {
     border-radius: 0.3125rem;
 }
 
+.large-icon {
+    font-size: 6rem;
+    color: var(--second03);
+    background-color: var(--primary03);
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15%;
+    animation: logo-bob 10s ease-in-out infinite;
+    box-shadow: 0 0rem 1.5rem black;
+}
+
+.large-icon.orange {
+    color: var(--third03);
+}
+
 .menu-btn {
     position: fixed;
     top: var(--margin-xs);
@@ -435,6 +453,12 @@ p {
     background-color: var(--primary02);
     color: white;
     box-shadow: 0 0.15rem 0.75rem var(--gray01);
+    transition: ease 0.25s;
+}
+
+.panel:hover {
+    background-color: var(--primary03);
+    transition: ease 0.25s;
 }
 
 .home-logo {
@@ -478,6 +502,28 @@ p {
         text-align: center;
         padding-left: var(--margin-xs);
     }
+
+    .large-icon {
+        display: none;
+    }
+
+    .small-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        font-size: 2rem;
+        color: var(--second03);
+        background-color: var(--primary03);
+        border-radius: 15%;
+        animation: logo-bob 10s ease-in-out infinite;
+        margin-right: var(--margin-xs);
+    }
+
+    .small-icon.orange {
+        color: var(--third03);
+    }
 }
 
 /* Desktop Styles */
@@ -505,6 +551,10 @@ p {
         display: flex;
         flex-direction: column;
     }
+
+    .small-icon {
+        display: none;
+    }
 }
 
 .contact-icons {
@@ -521,7 +571,7 @@ p {
     width: 3.5rem;
     height: 3.5rem;
     font-size: 1.5rem;
-    margin: var(--margin-m);
+    margin: var(--margin-xs);
 }
 
 .break-line {
