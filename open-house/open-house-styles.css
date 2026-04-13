@@ -119,6 +119,7 @@ button,
     cursor: pointer;
     transform: scale(1);
     transform-origin: center;
+    text-decoration: none;
     transition:
         background 0.25s ease,
         color 0.25s ease,
@@ -133,11 +134,23 @@ button:hover,
 .block > a:hover {
     background: var(--third03);
     animation: button-hover 0.45s ease forwards;
+    color: white;
 }
 
 button:active,
 .block > a:active {
     background: var(--third01);
+}
+
+a.button-link-disabled,
+a.button-link-disabled:hover,
+a.button-link-disabled:active {
+    pointer-events: none;
+    cursor: default;
+    animation: none;
+    transform: none;
+    background: var(--second03);
+    color: white;
 }
 
 button.secondary {
@@ -165,12 +178,12 @@ button.secondary:active {
 }
 
 
-a {
+.link-text {
     color: var(--second03);
     transition: ease 0.25s;
 }
 
-a:hover {
+.link-text:hover {
     color: var(--third03);
     transition: ease 0.25s;
 }
@@ -193,14 +206,28 @@ h2 {
 }
 
 h3 {
-    font-size: var(--font-medium);
+    font-size: var(--header-3);
+}
+
+h4 {
+    font-size: var(--header-3);
+    color: var(--second03);
+}
+
+p {
+    color: var(--gray01);
+    margin-bottom: var(--margin-xl);
+}
+
+.center-text {
+    text-align: center;
 }
 
 /* Main Content */
 #main-content {
     width: 100%;
-    height: 100%;
-    min-height: 100%;
+    height: calc(100% - 3.5rem);
+    min-height: calc(100% - 3.5rem);
     margin: 0;
     overflow-x: hidden;
     overflow-y: auto;
@@ -245,11 +272,6 @@ h3 {
     margin: 0;
 }
 
-.menu-screen-logo {
-    display: block;
-    margin-bottom: var(--margin-m);
-}
-
 .menu-screen-button {
     font-size: var(--header-3);
     font-weight: bold;
@@ -263,11 +285,69 @@ h3 {
 
 .menu-screen-button:hover {
     background-color: transparent;
-    border-bottom: 0.25rem solid white;
+    border-bottom: 0.25rem solid var(--third03);
+}
+
+.contact-button {
+    height: 2.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--margin-xs);
+}
+
+.banner-home {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    display: block;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+    display: block;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background-repeat: no-repeat;
+    object-position: center;
+}
+
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.banner-logo-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .topbar {
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 9001;
     background-color: var(--primary02);
     box-shadow: 0 0.15rem 0.75rem rgba(0, 0, 0, 0.45);
@@ -288,6 +368,14 @@ h3 {
     /* height: 100%; */
     max-height: 2.75rem;
     flex-shrink: 0;
+    transition: transform 0.25s ease, background 0.25s ease, border-radius 0.25s ease;
+}
+
+.topbar-logo:hover {
+    transform: scale(1.1);
+    transition: transform 0.25s ease;
+    background: var(--primary03);
+    border-radius: 0.3125rem;
 }
 
 .menu-btn {
@@ -303,6 +391,29 @@ h3 {
     width: 2.5rem;
     height: 2.5rem;
     transition: border 0.25s ease transparent;
+}
+
+#footer {
+    background-color: var(--gray01);
+    color: var(--gray04);
+    padding: var(--margin-m);
+    text-align: center;
+}
+
+#footer p {
+    margin: 0;
+    color: var(--gray03);
+    font-size: var(--font-small);
+}
+
+#footer a {
+    color: var(--second03);
+    font-size: var(--font-small);
+    text-decoration: underline;
+}
+
+#footer a:hover {
+    color: var(--third03);
 }
 
 .menu-btn.active {
@@ -326,12 +437,12 @@ h3 {
     box-shadow: 0 0.15rem 0.75rem var(--gray01);
 }
 
-.panel .logo {
-    width: 100%;
+.home-logo {
+    max-width: 25rem;
     height: auto;
-    max-width: 200px;
-    max-height: 200px;
     object-fit: contain;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Mobile Styles */
@@ -393,26 +504,7 @@ h3 {
         min-height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: safe center;
     }
-}
-
-.topbar .navbar-nav {
-    width: 100%;
-}
-
-.topbar .navbar-nav>.nav-item {
-    width: 100%;
-}
-
-.n-link {
-    display: block;
-    width: 100%;
-    text-decoration: none;
-    color: var(--gray01);
-    padding: var(--margin-xs);
-    background-color: transparent;
-    transition: ease 0.25s;
 }
 
 .contact-icons {
@@ -426,18 +518,21 @@ h3 {
 }
 
 .contact-icon {
-    border-radius: 0.5rem;
-    background-color: transparent;
-    color: var(--gray01);
-    transition: ease 0.25s;
-    padding: var(--margin-xs);
-    font-size: 0.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    margin: var(--margin-m);
 }
 
-.contact-icon:hover {
-    color: white;
-    background-color: var(--primary03);
-    transition: ease 0.25s;
+.break-line {
+    width: 80%;
+    height: 2px;
+    background-color: var(--gray01);
+    margin-top: var(--margin-m);
+    margin-bottom: var(--margin-m);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-mobile {
@@ -678,4 +773,21 @@ button > a:active {
     100% {
         transform: scale(1);
     }
+}
+
+@keyframes logo-bob {
+    0% {
+        transform: translateY(0.5rem);
+    }
+    50% {
+        transform: translateY(-0.5rem);
+    }
+    100% {
+        transform: translateY(0.5rem);
+    }
+}
+
+.logo-bob {
+    animation: logo-bob 10s ease-in-out infinite;
+    will-change: transform;
 }

@@ -7,7 +7,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <title>Open House Games</title>
+    <link rel="icon" type="image/png" href="images/Logo-06.png">
+    <title>Contact Us | Open House Games</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -39,9 +40,9 @@
     <!-- Topbar (Header) -->
     <div class="topbar header-row flex">
         <a class="navbar-brand py-2 me-md-3" href="home.html">
-            <img src="images/Logo-05.svg" class="img-fluid topbar-logo" alt="Open House Games" />
+            <img src="images/Logo-05.png" class="img-fluid topbar-logo" alt="Open House Games" />
         </a>
-        <button type="button" class="secondary margin-auto-left m-3">
+        <button type="button" class="secondary margin-auto-left m-3 contact-button">
             <i class="fa-solid fa-envelope" aria-hidden="true"></i>
             <a href="contact.html">Contact Us</a>
         </button>
@@ -52,7 +53,7 @@
     </div>
     <!-- Menu Screen -->
     <nav id="menu-screen" class="menu-screen animate-slide-down-in hidden">
-        <!-- <img src="images/Logo-06.svg" class="img-fluid menu-screen-logo" alt="Open House Logo" width="100" /> -->
+        <!-- <img src="images/Logo-06.png" class="img-fluid menu-screen-logo" alt="Open House Logo" width="100" /> -->
         <ul class="menu-screen-list navbar-nav">
             <li class="menu-screen-item animate-scale-in-delay-1">
                 <button class="menu-screen-button">
@@ -73,19 +74,67 @@
     </nav>
     <!-- Main Content -->
     <div id="main-content">
+        <div class="banner animate-slide-fade-in-delay-1">
+            <img src="images/envelope-banner.png" class="img-fluid banner-image" alt="Envelope Banner" />
+            <div class="banner-text">
+                <h1>Contact Us!</h1>
+            </div>
+        </div>
         <!-- Contact Page -->
-        <section id="desc" class="container-fluid">
-            <div class="content-margin">
+        <div id="desc" class="container">
+            <div class="content-margin animate-slide-fade-in-delay-2">
                 <div class="row flex-align-left">
                     <div class="col-md-6">
-                        <h1 class="desc-header">Contact Us</h1>
+                        <h2 class="desc-header">Want to get involved?</h2>
                         <p>
-                            You can contact us via email at <a href="mailto:openhousegames@gmail.com">openhousegames@gmail.com</a>
+                            We're always looking for new contributors. If you want to get involved in any of our
+                            projects, pitch us an idea, or even just say hi, then just hit us up! We'd love to hear from
+                            you!
                         </p>
                     </div>
+                    <div class="break-line"></div>
+                </div>
+                <div class="row flex-align-left"></div>
+                <div class="col-md-12">
+                    <h2 class="desc-header">Contact Information</h2>
+                    <p>
+                        If you want to contact me directly, you can email me at <a
+                            href="mailto:thomasbrown833@u.boisestate.edu">thomasbrown833@u.boisestate.edu</a>
+                        <br /><br />
+                        Additionally, you can find me on the following platforms:
+                    </p>
+                </div>
+                <div class="contact-icons flex-align-center">
+                    <button type="button" class="contact-icon">
+                        <a href="mailto:thomasbrown833@u.boisestate.edu">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </button>
+                    <button type="button" class="contact-icon">
+                        <a href="https://github.com/TB2056">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </button>
+                    <button type="button" class="contact-icon">
+                        <a href="https://www.artstation.com/thesolarmaster8">
+                            <i class="fa-brands fa-artstation"></i>
+                        </a>
+                    </button>
+                    <button type="button" class="contact-icon">
+                        <a href="https://www.linkedin.com/in/thomasbrown2056/">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
+        <div id="footer">
+            <div class="content-margin">
+                <p>
+                    &copy; 2026 Open House Games. All rights reserved.
+                </p>
+            </div>
+        </div>
     </div>
 
 </body>
