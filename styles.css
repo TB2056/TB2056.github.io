@@ -190,9 +190,9 @@ a.link-button:link, a.link-button:visited {
 }
 
 .project-video {
+    border-radius: var(--margin-s);
     width: 100%;
     height: auto;
-    border-radius: 1rem;
 }
 
 .project-break {
