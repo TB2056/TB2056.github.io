@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Thomas Brown's Portfolio</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <!-- Portfolio Site Scripts -->
+    <script src="../sidebar.js" defer></script>
+
+</head>
+
+<body>
+    <div class="bg-animation">
+        <div id='stars'></div>
+    </div>
+    <div class="row sidebar-row">
+        <div class="col-md-3">
+            <nav class="navbar navbar-expand-md sidebar navbar-dark p-0">
+                <button class="navbar-toggler ms-auto m-2 d-md-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#sidebarNav" aria-controls="sidebarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="sidebarNav" class="collapse navbar-collapse">
+                    <div class="sidebar-stack">
+                        <img src="../images/photo.jpg" class="sidebar-photo img-fluid d-none d-md-block"
+                            alt="My photo!" />
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a class="n-link active" href="/#home">
+                                    <h3>
+                                        <i class="fa-solid fa-house"></i>
+                                        Home
+                                    </h3>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="n-link" href="/#projects">
+                                    <h3>
+                                        <i class="fa-solid fa-code"></i>
+                                        Projects
+                                    </h3>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="n-link" href="/#contact">
+                                    <h3>
+                                        <i class="fa-solid fa-envelope"></i>
+                                        Contact Me
+                                    </h3>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav d-md-none contact-mobile">
+                            <li class="nav-item">
+                                <a class="n-link" href="https://github.com/TB2056">
+                                    <h3><i class="fa-brands fa-github"></i> GitHub</h3>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- TODO: Add ArtStation link -->
+                                <a class="n-link" href="https://www.artstation.com/thesolarmaster8">
+                                    <h3><i class="fa-brands fa-artstation"></i> ArtStation</h3>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="n-link" href="https://www.linkedin.com/in/thomasbrown2056/">
+                                    <h3><i class="fa-brands fa-linkedin"></i> LinkedIn</h3>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="n-link" href="https://solarmaster.itch.io/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <h3><i class="fa-brands fa-itch-io"></i> itch.io</h3>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="n-link" href="#mailto:thomasbrown833@u.boisestate.edu">
+                                    <h3><i class="fa-solid fa-envelope"></i> Email</h3>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="contact-icons d-none d-md-flex">
+                            <a class="icon-link contact-icon" href="https://github.com/TB2056" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <!-- TODO: Add ArtStation link -->
+                            <a class="icon-link contact-icon" href="https://www.artstation.com/thesolarmaster8"
+                                aria-label="ArtStation">
+                                <i class="fa-brands fa-artstation"></i>
+                            </a>
+                            <a class="icon-link contact-icon" href="https://www.linkedin.com/in/thomasbrown2056/"
+                                aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a class="icon-link contact-icon" href="https://solarmaster.itch.io/" target="_blank"
+                                rel="noopener noreferrer" aria-label="itch.io">
+                                <i class="fa-brands fa-itch-io"></i>
+                            </a>
+                            <a class="icon-link contact-icon" href="mailto:thomasbrown833@u.boisestate.edu"
+                                aria-label="Email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-md-9">
+            <div id="scrollbox">
+                <section id="projects" class="container">
+                    <div class="row">
+                        <div class="hero-contents px-5 py-4">
+                            <h1>London Larceny</h1>
+                            <h2>2D Side-Scrolling Platformer Game made in Unity</h2>
+                            <div class="project-description">
+                                <p>
+                                    London Larceny is a 2D side-scrollingplatformer game and my first (complete) solo
+                                    Unity
+                                    game. The game was made in approximately 4 weeks.
+                                    <br /><br />
+                                    London Larceny features a simple story surounding retreiving a stolen diamond from a
+                                    museum. The two protaginists have to retreive the diamond. The gameplay primarily
+                                    comprises of player switching between the two main protaginists and using their
+                                    abilities to navigate each section.
+                                    <br /><br />
+                                    All assets were created by me, including all sprites and the game opening animation.
+                                </p>
+                            </div>
+                            <div class="frame container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3>Introduction Animation</h3>
+                                        <video class="project-video" controls preload="metadata" playsinline>
+                                            <source src="london_larceny/london_larceny_intro_anim.mp4" type="video/mp4">
+                                            Your browser does not support embedded video.
+                                        </video>
+                                        <p>
+                                            Unfortunately due to Unity's security vulnerabilities, the project had to be
+                                            updated from Unity 5 to Unity 6. This resulted in some features breaking
+                                            such as the games video playback system. You will unfortunately not see this
+                                            animation play in the Itch.io build.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="project-break"></div>
+                                <h3>Screenshots</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="london_larceny/ll_game_screenshot_01.png"
+                                            class="img-fluid project-image mt-3" alt="London Larceny screenshot">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="london_larceny/ll_game_screenshot_02.png"
+                                            class="img-fluid project-image mt-3" alt="London Larceny screenshot">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="london_larceny/ll_game_screenshot_03.png"
+                                            class="img-fluid project-image mt-3" alt="London Larceny screenshot">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="london_larceny/ll_game_screenshot_04.png"
+                                            class="img-fluid project-image mt-3" alt="London Larceny screenshot">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="london_larceny/ll_game_screenshot_05.png"
+                                            class="img-fluid project-image mt-3" alt="London Larceny screenshot">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <img src="london_larceny/ll_game_screenshot_06.png"
+                                            class="img-fluid project-image mt-3" alt="London Larceny screenshot">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <img src="london_larceny/ll_game_screenshot_07.png"
+                                            class="img-fluid project-image mt-3" alt="London Larceny screenshot">
+                                    </div>
+                                </div>
+                                <div class="project-break"></div>
+                                <div class="row mt-3">
+                                    <div class="col-md-12">
+                                        <button>
+                                            <a href="https://solarmaster.itch.io/london-larceny" target="_blank"
+                                                rel="noopener noreferrer"><i class="fa-brands fa-itch-io"
+                                                    aria-hidden="true"></i> View on Itch.io</a>
+                                        </button>
+                                        <button class="button-secondary">
+                                            <a href="/#projects">Back to Projects</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

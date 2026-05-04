@@ -1,9 +1,10 @@
+// Note: Scroll-animation.js was assisted by Claude and should be considered public-domain. Feel free to use it if you are snooping around this code.
 window.addEventListener("DOMContentLoaded", () => {
-    const scrollRoot = document.getElementById("main-content");
-    if (!scrollRoot) return;
+    const scrollBox = document.getElementById("main-content");
+    if (!scrollBox) return;
 
     const animatedElements = Array.from(
-        scrollRoot.querySelectorAll("[data-animate]")
+        scrollBox.querySelectorAll("[data-animate]")
     );
     if (!animatedElements.length) return;
 
@@ -32,7 +33,7 @@ window.addEventListener("DOMContentLoaded", () => {
             }
         },
         {
-            root: scrollRoot,
+            root: scrollBox,
             threshold: 0.2,
             rootMargin: "0px 0px -10% 0px",
         }
