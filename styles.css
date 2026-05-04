@@ -113,7 +113,8 @@ h5 {
     margin-bottom: var(--margin-m);
 }
 
-button {
+button, a.link-button {
+    display: inline-block;
     background-color: var(--orange50);
     border: none;
     border-radius: 0.25rem;
@@ -125,25 +126,24 @@ button {
     margin-right: var(--margin-m);
     margin-bottom: var(--margin-m);
     text-decoration: none;
+    text-align: center;
+    cursor: pointer;
 }
 
-button:hover {
+button:hover, a.link-button:hover {
     background-color: var(--orange60);
+    color: white;
     transition: ease 0.25s;
 }
 
-button:active {
+button:active, a.link-button:active {
     background-color: white;
     color: var(--orange50);
     transition: ease 0.25s;
 }
 
-button a {
-    color: inherit;
-}
-
-button a:active {
-    color: inherit;
+a.link-button:link, a.link-button:visited {
+    color: white;
 }
 
 .button-secondary {
